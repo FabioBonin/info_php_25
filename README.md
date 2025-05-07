@@ -1,4 +1,4 @@
-abrir vscode
+sufabrir vscode
 ver se esta logado do ubuntu
 file open folder; selecionar tudo e apagar 
 - /var/www/html e da um ok
