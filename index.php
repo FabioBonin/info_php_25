@@ -58,3 +58,41 @@ if ($media >=7){
 else {
     echo "Não Aprovado";
 }
+echo "<br>";
+
+ $prova1 = 8;
+ $prova2 = 7;
+ $prova3 = 6;
+ $prova4 = 9;
+ $peso1 = 3;
+ $peso2 = 3;
+ $peso3 = 2;
+ $peso4 = 2;
+ $notapeso = ($prova1 * $peso1 + $prova2 * $peso2 + $prova3 * $peso3 + $prova4 * $peso4) 
+ / ($peso1 + $peso2 + $peso3 + $peso4);
+ if ($notapeso>=7){
+    echo "Aprovado com a nota $notapeso";
+}
+else {
+    echo "Não Aprovado a nota $notapeso";
+}
+
+
+ echo "<br>";
+
+ $prova1 = 8;
+ $prova2 = 7;
+ $prova3 = 6;
+ $prova4 = 9;
+ $numero = 4;
+ $inverso = (1/$prova1) + (1/$prova2) + (1/$prova3) + (1/$prova4);
+ $media = $numero / $inverso;
+if ($media >=7){
+    echo "Aprovado com a nota $media";
+}
+else {
+    echo "Não Aprovado com a nota $media";
+}
+echo "<br>";
+
+
