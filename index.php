@@ -49,9 +49,8 @@ echo "<br>";
  $prova2 = 7;
  $prova3 = 6;
  $prova4 = 9;
- $soma = $prova1 += $prova2 += $prova3 += $prova4;
- $media = $soma /= 4;
-
+ $soma = $prova1 + $prova2 + $prova3 + $prova4;
+ $media = $soma / 4;
 if ($media >=7){
     echo "Aprovado";
 }
@@ -84,15 +83,79 @@ else {
  $prova2 = 7;
  $prova3 = 6;
  $prova4 = 9;
- $numero = 4;
+ $quantidade = 4;
  $inverso = (1/$prova1) + (1/$prova2) + (1/$prova3) + (1/$prova4);
- $media = $numero / $inverso;
-if ($media >=7){
-    echo "Aprovado com a nota $media";
+ $mediaH = $quantidade / $inverso;
+if ($mediaH >=7){
+    echo "Aprovado com a nota $mediaH";
 }
 else {
-    echo "Não Aprovado com a nota $media";
+    echo "Não Aprovado com a nota $mediaH";
 }
 echo "<br>";
 
+$numero1 = 4;
+$numero2 = 3;
+$operador = "*";
 
+if ($operador == "+") {
+    $resultado = $numero1 + $numero2;
+    echo " $numero1 + $numero2 = $resultado" ;
+}
+else if($operador == "-") {
+    $resultado = $numero1 - $numero2;
+    echo " $numero1 - $numero2 = $resultado" ;
+}
+else if($operador == "*") {
+    $resultado = $numero1 * $numero2;
+    echo " $numero1 * $numero2 = $resultado" ;
+}
+else if ($operador == "/") {
+    $resultado = $numero1 / $numero2;
+    echo " $numero1 / $numero2 = $resultado" ;
+} else {
+    echo "ERRO";
+}
+echo "<br>";
+
+$valorA = 10;
+$valorB = 10;
+$valorC = 10;
+
+if ($valorA == $valorB && $valorC == $valorA){
+    echo "São iguail";
+}
+
+else {
+    echo "Não são iguail";
+}
+echo"<br>";
+
+if ($valorA == $valorB && $valorC == $valorA){
+    echo "Triangulo Equilatero";
+}
+
+else if (
+ ($valorA == $valorB && $valorA > $valorC)
+  ||( $valorB= $valorC && $valorB > $valorA)
+   ||( $valorA == $valorC && $valorA == $valorB) )
+ {
+    echo "Triangulo isoceles";
+ }
+ else if(
+  ($valorA != $valorB && $valorB != $valorC) &&
+ ($valorA + $valorB > $valorC) )
+ {
+    echo "Triangolo escaleno";
+ }
+
+ else {
+    echo "Não é triangolo";
+ }
+
+ echo"<br>";
+
+ for ($i = 0; $i <= 10; $i++){
+$resultado =$multiplicador * $i;
+echo "$multiplicador * $i = $resultado" . "br>";
+ }
