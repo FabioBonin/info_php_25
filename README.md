@@ -8,7 +8,7 @@ file open folder; seleciona tudo e apaga
 - /var/www/html/info/_php//-25 e da um ok
 terminal novo terminal
 verificar se esta em; /var/www/html/info_php_25
-sudo service acaphe2 start ( para liberar o localhost)
+sudo service apache2 start ( para liberar o localhost)
 git add .
-git commmit -m "testo" 
+git commit -m "testo" 
 git push

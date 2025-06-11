@@ -1,5 +1,5 @@
 <?php
-echo "Ola Mundo! <br> ";
+// echo "Ola Mundo! <br> ";
 
 // $x = 2 + 2;
 // echo $x ;
@@ -206,18 +206,55 @@ echo "Ola Mundo! <br> ";
  
 // echo "<br>";
 
- for ($i = 10; $i >= 0 ; $i--){
+// $cont = 0;
 
-        echo "$i" . "<br>";
+//  for ($i = 10; $i >= 0 ; $i--){
+
+//         echo "$i" . "<br>";
      
- }
+//  }
 
- echo "<br>";
+//  echo "<br>";
 
- $contaPrimos = 0;
+//  $contPrimos = 0;
+
+//  for ($numeroAvaliado = 2; $contPrimos < 5; $numeroAvaliado++) {
+//      $penultimoNumero = $numeroAvaliado - 1;
+//      $ehPrimo = true;
+
+//     for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
+
+//         $resto = $numeroAvaliado % $divisor;
+//         $divisaoExata = $resto == 0;
+
+//         if ($divisaoExata && $divisor < $penultimoNumero) {
+//             $ehPrimo = false;
+//             break; 
+//         }
+            
+//     }
+
+//     if ($ehPrimo) {
+//         $contPrimos++;
+//         echo "O numero: $numeroAvaliado é primo!<br>";
+
+//     }
+
+//  }
+// $primos = [];
+// $primos = [2,3,5,7,11]; 
+// for ($i = 0; $i < 5 ; $i++) {
+//     $primo = $primos[$i];
+
+
+// }
+
+$primos = [];
+$contPrimos = 0;
 
  for ($numeroAvaliado = 2; $contPrimos < 5; $numeroAvaliado++) {
      $penultimoNumero = $numeroAvaliado - 1;
+     $ehPrimo = true;
 
     for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
 
@@ -225,8 +262,23 @@ echo "Ola Mundo! <br> ";
         $divisaoExata = $resto == 0;
 
         if ($divisaoExata && $divisor < $penultimoNumero) {
+            $ehPrimo = false;
             break; 
         }
             
     }
+
+    if ($ehPrimo) {
+        $primos[] = $numeroAvaliado;
+        $contPrimos++;
+    }
+
  }
+
+ for ($i = 0; $i < count($primos) ; $i++) {
+    $primo = $primos[$i];
+    echo "Numero: $primo" . "<br>";
+
+}
+
+
