@@ -249,36 +249,82 @@
 
 // }
 
-$primos = [];
-$contPrimos = 0;
+// $primos = [];
+// $contPrimos = 0;
 
- for ($numeroAvaliado = 2; $contPrimos < 5; $numeroAvaliado++) {
-     $penultimoNumero = $numeroAvaliado - 1;
-     $ehPrimo = true;
+//  for ($numeroAvaliado = 2; $contPrimos < 5; $numeroAvaliado++) {
+//      $penultimoNumero = $numeroAvaliado - 1;
+//      $ehPrimo = true;
 
-    for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
+//     for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
 
-        $resto = $numeroAvaliado % $divisor;
-        $divisaoExata = $resto == 0;
+//         $resto = $numeroAvaliado % $divisor;
+//         $divisaoExata = $resto == 0;
 
-        if ($divisaoExata && $divisor < $penultimoNumero) {
-            $ehPrimo = false;
-            break; 
-        }
+//         if ($divisaoExata && $divisor < $penultimoNumero) {
+//             $ehPrimo = false;
+//             break; 
+//         }
             
+//     }
+
+//     if ($ehPrimo) {
+//         $primos[] = $numeroAvaliado;
+//         $contPrimos++;
+//     }
+
+//  }
+
+//  for ($i = 0; $i < count($primos) ; $i++) {
+//     $primo = $primos[$i];
+//     echo "Numero: $primo" . "<br>";
+
+// }
+
+// $palavra = "ana";
+// $tamanho = strlen($palavra) - 1;
+// $a = 0;
+// $ehpalindromo = true;
+
+// for ($i = $tamanho; $i <= 0; $i--) {
+//     $letrasIguais = $palavra[$a] == $palavraInvertida[$i];
+
+//     if (!$letrasIguais) {
+//         $ehpalindromo = false;
+//         break;
+//     }
+
+//     $a++;
+      
+// }
+//     if ($ehpalindromo) {
+//         echo "A palavra $palavra é um palíndromo.";
+//   }
+//     else {
+//         echo "A palavra $palavra não é palíndromo";
+//     }
+
+
+
+$palavra = "w";
+$frase = "Escola infoserv curso de PHP.";
+$tamanho = strlen($frase) - 1;
+$ehpalavra = true;
+    for ($i = $tamanho; $i < 0; $i++) {
+        $palavraIguail = $palavra == $frase[$i];
+    
+        if (!$palacraCerta) {
+            $ehpalavra = false;
+            break;
+        }
+        $a++;
+    
     }
-
-    if ($ehPrimo) {
-        $primos[] = $numeroAvaliado;
-        $contPrimos++;
-    }
-
- }
-
- for ($i = 0; $i < count($primos) ; $i++) {
-    $primo = $primos[$i];
-    echo "Numero: $primo" . "<br>";
-
-}
-
-
+        if ($ehpalavra) {
+            echo "A palavra $palavra tem na frase.";
+      }
+        else {
+            echo "A palavra $palavra nao tem na frase";
+        }
+    
+    

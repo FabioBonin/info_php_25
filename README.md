@@ -12,3 +12,5 @@ sudo service apache2 start ( para liberar o localhost)
 git add .
 git commit -m "testo" 
 git push
+como corrigir esse erro fatal: destination path 'info_php_25' already exists and is not an empty directory
+rm -rf info_php_25
