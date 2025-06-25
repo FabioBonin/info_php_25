@@ -303,28 +303,57 @@
 //     else {
 //         echo "A palavra $palavra não é palíndromo";
 //     }
+$palavraProcurada = "PHP";
+$frase = "Escola infoserv de PHP curso.";
+$tamanhoPalavra = strlen($palavraProcurada) - 1;
+$tamanhoFrase = strlen($frase) - 1;
+$encontrou = false;
+$tamanhoReal = $tamanhoFrase - $tamanhoPalavra;
+    for ($i = 0; $i <= $tamanhoReal; $i++) {
+        $letrasIguail = true;
+     for ($a = 0; $a <= $tamanhoPalavra; $a++){
 
+        $indeceAtualDaFrase = $i + $a;
+        $letraAtualDaFrase = $frase[$indeceAtualDaFrase];
+        $letraAtualDaPalavra = $palavraProcurada[$a];
 
-
-$palavra = "w";
-$frase = "Escola infoserv curso de PHP.";
-$tamanho = strlen($frase) - 1;
-$ehpalavra = true;
-    for ($i = $tamanho; $i < 0; $i++) {
-        $palavraIguail = $palavra == $frase[$i];
-    
-        if (!$palacraCerta) {
-            $ehpalavra = false;
+        if ($letraAtualDaFrase != $letraAtualDaPalavra){
+            $letrasIguail = false;
             break;
         }
-        $a++;
-    
+        if($letrasIguail)
+        $encontrou = true;
+        break;
     }
-        if ($ehpalavra) {
-            echo "A palavra $palavra tem na frase.";
-      }
-        else {
-            echo "A palavra $palavra nao tem na frase";
-        }
+    if ($encontrou) {
+                     echo "A palavra $palavraProcurada tem na frase.";
+            }
+             else {
+                    echo "A palavra $palavraProcurada nao tem na frase";
+                 }
+}
     
+
+
+
     
+        // $palavraProcurada = "php";
+        // $frase = "Escola infoserv de PHP curso.";
+        // $tamanhoPalavra = strlen($palavraProcurada);
+        // $tamanhoFrase = strlen($frase);
+        // $encontrou = false;
+        
+        // for ($i = 0; $i <= $tamanhoFrase - $tamanhoPalavra; $i++) {
+        //     $sub = substr($frase, $i, $tamanhoPalavra);
+        //     if ($sub === $palavraProcurada) {
+        //         $encontrou = true;
+        //         break;
+        //     }
+        // }
+        
+        // if ($encontrou) {
+        //     echo "$palavraProcurada encontrada!";
+        // } else {
+        //     echo "$palavraProcurada não encontrada!";
+        // }
+        
