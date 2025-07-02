@@ -303,39 +303,36 @@
 //     else {
 //         echo "A palavra $palavra não é palíndromo";
 //     }
-$palavraProcurada = "PHP";
-$frase = "Escola infoserv de PHP curso.";
-$tamanhoPalavra = strlen($palavraProcurada) - 1;
-$tamanhoFrase = strlen($frase) - 1;
-$encontrou = false;
-$tamanhoReal = $tamanhoFrase - $tamanhoPalavra;
-    for ($i = 0; $i <= $tamanhoReal; $i++) {
-        $letrasIguail = true;
-     for ($a = 0; $a <= $tamanhoPalavra; $a++){
+// $palavraProcurada = "PHP";
+// $frase = "Escola infoserv de PHP curso.";
+// $tamanhoPalavra = strlen($palavraProcurada) - 1;
+// $tamanhoFrase = strlen($frase) - 1;
+// $encontrou = false;
+// $tamanhoReal = $tamanhoFrase - $tamanhoPalavra;
+//     for ($i = 0; $i <= $tamanhoReal; $i++) {
+//         $letrasIguail = true;
+//      for ($a = 0; $a <= $tamanhoPalavra; $a++){
 
-        $indeceAtualDaFrase = $i + $a;
-        $letraAtualDaFrase = $frase[$indeceAtualDaFrase];
-        $letraAtualDaPalavra = $palavraProcurada[$a];
+//         $indeceAtualDaFrase = $i + $a;
+//         $letraAtualDaFrase = $frase[$indeceAtualDaFrase];
+//         $letraAtualDaPalavra = $palavraProcurada[$a];
 
-        if ($letraAtualDaFrase != $letraAtualDaPalavra){
-            $letrasIguail = false;
-            break;
-        }
-        if($letrasIguail)
-        $encontrou = true;
-        break;
-    }
-    if ($encontrou) {
-                     echo "A palavra $palavraProcurada tem na frase.";
-            }
-             else {
-                    echo "A palavra $palavraProcurada nao tem na frase";
-                 }
-}
+//         if ($letraAtualDaFrase != $letraAtualDaPalavra){
+//             $letrasIguail = false;
+//             break;
+//         }
+//         if($letrasIguail)
+//         $encontrou = true;
+//         break;
+//     }
+//     if ($encontrou) {
+//                      echo "A palavra $palavraProcurada tem na frase.";
+//             }
+//              else {
+//                     echo "A palavra $palavraProcurada nao tem na frase";
+//                  }
+// }
     
-
-
-
     
         // $palavraProcurada = "php";
         // $frase = "Escola infoserv de PHP curso.";
@@ -356,4 +353,78 @@ $tamanhoReal = $tamanhoFrase - $tamanhoPalavra;
         // } else {
         //     echo "$palavraProcurada não encontrada!";
         // }
-        
+        // $numero1 = 4;
+
+    // count (); //obtem o tamanho de uma array/objeto
+    // strlen (); //obtem o tamanho de uma string
+    // substr(); // obtem uma parte de uma string
+
+
+
+// function calculadora ($numero1, $operador,$numero2 ) {
+
+// if ($operador == "+") {
+//     $resultado = $numero1 + $numero2;
+//     echo " $numero1 + $numero2 = $resultado" ;
+// }
+// else if($operador == "-") {
+//     $resultado = $numero1 - $numero2;
+//     echo " $numero1 - $numero2 = $resultado" ;
+// }
+// else if($operador == "*") {
+//     $resultado = $numero1 * $numero2;
+//     echo " $numero1 * $numero2 = $resultado" ;
+// }
+// else if ($operador == "/") {
+//     $resultado = $numero1 / $numero2;
+//     echo " $numero1 / $numero2 = $resultado" ;
+// } else {
+//     echo "ERRO";
+// }
+
+// }
+// function somar ($numero1,$numero2 ) {
+//     $resultado = $numero1 + $numero2;
+//     return $resultado;
+// }
+// function diminuir ($numero1,$numero2 ) {
+//     $resultado = $numero1 - $numero2;
+//     return $resultado;
+// }
+// function divisor ($numero1,$numero2 ) {
+//     $resultado = $numero1 / $numero2;
+//     return $resultado;
+// }
+// function multipicador ($numero1,$numero2 ) {
+//     $resultado = $numero1 * $numero2;
+//     return $resultado;
+// }
+// $numero = 500;
+// $numero2 = 55;
+// $operador = "*";
+// echo calculadora($numero,$operador,$numero2);
+
+
+$data = "29/02/2025";
+$dataArry = explode("/", $data);
+
+$dia = $dataArry[0];
+$mes = $dataArry[1];
+$ano = $dataArry[2];
+ 
+$mesTrinta = [4,6,8,9,11];
+$mesTrintadois = [1,3,5,7,8,10,12];
+$dia = true;
+    if ($dia < 1 || $dia > 31) {
+        $dia = $mesTrinta[];
+    }
+    if else ($dia < 0 || $dia > 32) {
+        $dia = $mesTrintadois[];
+
+    }
+
+    else ($dia = false)
+    $i++;
+    
+
+

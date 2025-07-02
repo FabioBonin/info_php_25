@@ -14,29 +14,8 @@ git commit -m "testo"
 git push
 como corrigir esse erro fatal: destination path 'info_php_25' already exists and is not an empty directory
 rm -rf info_php_25
-Você pode completar esse código em PHP usando um for para verificar se a palavra "curso" está contida dentro da frase, mesmo que ela esteja no meio dela. Para isso, dentro do loop, é preciso extrair pedaços da frase do mesmo tamanho da palavra procurada e compará-los.
 
-Aqui vai o código completo:
 
-<?php
 
-$palavraProcurada = "curso";
-$frase = "Escola infoserv de PHP urso.";
 
-$tamanhoPalavra = strlen($palavraProcurada);
-$tamanhoFrase = strlen($frase);
-$encontrou = false;
 
-for ($i = 0; $i <= $tamanhoFrase - $tamanhoPalavra; $i++) {
-    $sub = substr($frase, $i, $tamanhoPalavra);
-    if ($sub === $palavraProcurada) {
-        $encontrou = true;
-        break;
-    }
-}
-
-if ($encontrou) {
-    echo "Palavra encontrada!";
-} else {
-    echo "Palavra não encontrada.";
-}
