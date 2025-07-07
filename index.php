@@ -411,20 +411,30 @@ $dataArry = explode("/", $data);
 $dia = $dataArry[0];
 $mes = $dataArry[1];
 $ano = $dataArry[2];
- 
-$mesTrinta = [4,6,8,9,11];
-$mesTrintadois = [1,3,5,7,8,10,12];
-$dia = true;
-    if ($dia < 1 || $dia > 31) {
-        $dia = $mesTrinta[];
-    }
-    if else ($dia < 0 || $dia > 32) {
-        $dia = $mesTrintadois[];
+ $diasPorMes = 
+ [  1 => 31, 2 => 28, 3 =>31, 4 => 30, 5 => 31, 6 => 30,
+    7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 ];
+
+    if (($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0) ) {
+    $diasPorMes[2] = 29;
+}
+
+    if ($mes < 1 || $mes > 12 || $dia < 1 || $dia > $diasPorMes[$mes]){
+
+        $dia++;
+
+    if ($dia > $diasPorMes[$mes]) {
+
+        $dia = 1;
+        $mes++;
+
+    if ($mes > 12) {
+
+        $mes = 1;
+        $ano++;
+
+            }
+        }
 
     }
-
-    else ($dia = false)
-    $i++;
-    
-
-
+    echo "Data válida: $dia/$mes/$ano";
