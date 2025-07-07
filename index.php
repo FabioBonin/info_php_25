@@ -438,3 +438,43 @@ $ano = $dataArry[2];
 
     }
     echo "Data válida: $dia/$mes/$ano";
+
+        echo "<br>";
+
+$alfa = ["A", "B", "C", "D", "E"];
+$numeros = [10, 20, 30, 40, 50];
+
+for ($i = 0; $i < count($alfa); $i++) {
+    for ($j = $i + 1; $j < count($alfa); $j++) {
+        
+    if ($alfa[$i] < $alfa[$j]) {
+            $temp = $alfa[$i];
+            $alfa[$i] = $alfa[$j];
+            $alfa[$j] = $temp;
+        }
+    }
+}
+
+for ($i = 0; $i < count($numeros); $i++) {
+    for ($j = $i + 1; $j < count($numeros); $j++) {
+
+    if ($numeros[$i] < $numeros[$j]) {
+            $temp = $numeros[$i];
+            $numeros[$i] = $numeros[$j];
+            $numeros[$j] = $temp;
+        }
+    }
+}
+
+echo "Alfabeto: ";
+for ($i = 0; $i < count($alfa); $i++) {
+    echo $alfa[$i];
+    if ($i < count($alfa) - 1) echo ", ";
+}
+    echo "<br>";
+
+echo "Números: ";
+for ($i = 0; $i < count($numeros); $i++) {
+    echo $numeros[$i];
+    if ($i < count($numeros) - 1) echo ", ";
+}
