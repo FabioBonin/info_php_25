@@ -405,76 +405,200 @@
 // echo calculadora($numero,$operador,$numero2);
 
 
-$data = "29/02/2025";
-$dataArry = explode("/", $data);
+// $data = "29/2/2025";
+// $dataArry = explode("/", $data);
 
-$dia = $dataArry[0];
-$mes = $dataArry[1];
-$ano = $dataArry[2];
- $diasPorMes = 
- [  1 => 31, 2 => 28, 3 =>31, 4 => 30, 5 => 31, 6 => 30,
-    7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 ];
+// $dia = $dataArry[0];
+// $mes = $dataArry[1];
+// $ano = $dataArry[2];
+//  $diasPorMes = 
+//  [  1 => 31, 2 => 28, 3 => 31, 4 => 30, 5 => 31, 6 => 30,
+//     7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 ];
 
-    if (($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0) ) {
-    $diasPorMes[2] = 29;
-}
+//     if (($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0) ) {
+//     $diasPorMes[2] = 29;
+// }
 
-    if ($mes < 1 || $mes > 12 || $dia < 1 || $dia > $diasPorMes[$mes]){
+//     if ($mes < 1 || $mes > 12 || $dia < 1 || $dia > $diasPorMes[$mes]){
 
-        $dia++;
+//         $dia++;
 
-    if ($dia > $diasPorMes[$mes]) {
+//     if ($dia > $diasPorMes[$mes]) {
 
-        $dia = 1;
-        $mes++;
+//         $dia = 1;
+//         $mes++;
 
-    if ($mes > 12) {
+//     if ($mes > 12) {
 
-        $mes = 1;
-        $ano++;
+//         $mes = 1;
+//         $ano++;
 
-            }
-        }
+//             }
+//         }
 
-    }
-    echo "Data válida: $dia/$mes/$ano";
+//     }
+//     echo "Data válida: $dia/$mes/$ano";
 
-        echo "<br>";
+//         echo "<br>";
 
-$alfa = ["A", "B", "C", "D", "E"];
-$numeros = [10, 20, 30, 40, 50];
+// $alfa = ["A", "B", "C", "D", "E"];
+// $numeros = [10, 20, 30, 40, 50];
 
-for ($i = 0; $i < count($alfa); $i++) {
-    for ($j = $i + 1; $j < count($alfa); $j++) {
+// for ($i = 0; $i < count($alfa); $i++) {
+//     for ($a = $i + 1; $a < count($alfa); $a++) {
         
-    if ($alfa[$i] < $alfa[$j]) {
-            $temp = $alfa[$i];
-            $alfa[$i] = $alfa[$j];
-            $alfa[$j] = $temp;
-        }
+//     if ($alfa[$i] < $alfa[$a]) {
+//             $temp = $alfa[$i];
+//             $alfa[$i] = $alfa[$a];
+//             $alfa[$a] = $temp;
+//         }
+//     }
+// }
+// echo "Alfabeto: ";
+// for ($i = 0; $i < count($alfa); $i++) {
+//     echo $alfa[$i];
+//     if ($i < count($alfa) - 1) echo ", ";
+// }
+
+
+// for ($i = 0; $i < count($numeros); $i++) {
+//     for ($a = $i + 1; $a < count($numeros); $a++) {
+
+//     if ($numeros[$i] < $numeros[$a]) {
+//             $temp = $numeros[$i];
+//             $numeros[$i] = $numeros[$a];
+//             $numeros[$a] = $temp;
+//         }
+//     }
+// }
+//     echo "<br>";
+
+// echo "Números: ";
+// for ($i = 0; $i < count($numeros); $i++) {
+//     echo $numeros[$i];
+//     if ($i < count($numeros) - 1) echo ", ";
+// }
+
+// function ordenarArray{
+//     for ($i = 0; $i < count($dados); $i++) {
+//         for ($a = $i + 1; $a < count($dados); $a++) {
+            
+//         if ($dados[$i] < $dados[$a]) {
+//                 $temp = $dados[$i];
+//                 $dados[$i] = $dados[$a];
+//                 $dados[$a] = $temp;
+//             }
+//         }
+//     }
+
+//     return $dados;
+   
+// }
+
+// function exibir ($dados) {
+//     echo "Dados: ";
+//     for ($i = 0; $i < count($dados); $i++) {
+//     echo $dados[$i];
+//     if ($i < count($dados) - 1) echo ", ";
+//     }
+// }
+// $dados = [10, 20, 30, 40, 50, 1, 300];
+// $letras = ["A", "B", "C", "D", "E"];
+// $dadosOrdenados = ordenar ( $dados);
+// $letrasOrdenados = ordenar ( $letras);
+// $dados =  exibir ($dadosOrdenados);
+// echo "<br>";
+// $letras = exibir ($letrasOrdenados);
+
+
+// function ordenar (array $dados,string $ordem = "asc") {
+//     if ($ordem == "desc") {
+//         for ($i = 0; $i < count($dados); $i++) {
+//             for ($a = $i + 1; $a < count($dados); $a++) {
+                
+//             if ($dados[$i] < $dados[$a]) {
+//                     $temp = $dados[$i];
+//                     $dados[$i] = $dados[$a];
+//                     $dados[$a] = $temp;
+//                 }
+//             }
+            
+//         }
+//     }
+//     else  {
+//         for ($i = 0; $i > count($dados); $i++) {
+//             for ($a = $i + 1; $a < count($dados); $a++) {
+                
+//             if ($dados[$i] > $dados[$a]) {
+//                     $temp = $dados[$i];
+//                     $dados[$i] = $dados[$a];
+//                     $dados[$a] = $temp;
+//                 }
+//             }
+            
+//         }
+//     }
+//     return $dados;
+//     }
+      
+function ordenar(array $dados, string $ordem = "asc") {
+
+    $tam = count($dados);
+
+    for($i = 0; $i < $tam - 1; $i++) {
+
+        for($j = 0; $j < $tam - 1; $j++) {
+
+            $proximoIndice = $j + 1;
+            $numeroAtual = $dados[$j];
+            $proxNumero = $dados[$proximoIndice];
+
+            if ($ordem == "desc") {
+                if ($numeroAtual < $proxNumero) {
+                    $aux = $numeroAtual;
+                    $numeroAtual = $proxNumero;
+                    $proxNumero = $aux;
+            
+                    $dados[$j] = $numeroAtual;
+                    $dados[$proximoIndice] = $proxNumero;
+                }
+            } else {
+                if ($numeroAtual > $proxNumero) {
+                    $aux = $numeroAtual;
+                    $numeroAtual = $proxNumero;
+                    $proxNumero = $aux;
+
+                    $dados[$j] = $numeroAtual;
+                    $dados[$proximoIndice] = $proxNumero;
+                }
+            }
+        
+
+        } 
+    }  
+    return $dados;
+} 
+function exibir(array $dados) {
+    $tam = count($dados);
+
+    for ($i = 0; $i < $tam; $i++) {
+        echo "Array ordenado: $dados[$i]" . "<br>";
     }
-}
 
-for ($i = 0; $i < count($numeros); $i++) {
-    for ($j = $i + 1; $j < count($numeros); $j++) {
-
-    if ($numeros[$i] < $numeros[$j]) {
-            $temp = $numeros[$i];
-            $numeros[$i] = $numeros[$j];
-            $numeros[$j] = $temp;
-        }
-    }
-}
-
-echo "Alfabeto: ";
-for ($i = 0; $i < count($alfa); $i++) {
-    echo $alfa[$i];
-    if ($i < count($alfa) - 1) echo ", ";
-}
     echo "<br>";
-
-echo "Números: ";
-for ($i = 0; $i < count($numeros); $i++) {
-    echo $numeros[$i];
-    if ($i < count($numeros) - 1) echo ", ";
 }
+
+     
+       
+    
+$dados = [10, 20, 30, 40, 50, 1, 300];
+$dadosOrdenados = ordenar($dados,"desc");
+exibir($dadosOrdenados);
+
+echo "<br>";
+
+$dadosOrdenados = ordenar ($dados,"asc");
+exibir($dadosOrdenados);
+
+
+
