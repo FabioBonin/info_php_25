@@ -541,64 +541,98 @@
 //     return $dados;
 //     }
       
-function ordenar(array $dados, string $ordem = "asc") {
+// function ordenar(array $dados, string $ordem = "asc") {
 
-    $tam = count($dados);
+//     if ($ordem != "asc" && $ordem != "desc") {
+//         $ordem = "asc";
+//     }
+    
+//     $tam = count($dados);
 
-    for($i = 0; $i < $tam - 1; $i++) {
+//     if ($tam == 0) {
+//         echo "array vazio";
+//         return;
+//     }
 
-        for($j = 0; $j < $tam - 1; $j++) {
+//     for($i = 0; $i < $tam - 1; $i++) {
 
-            $proximoIndice = $j + 1;
-            $numeroAtual = $dados[$j];
-            $proxNumero = $dados[$proximoIndice];
+//         for($j = 0; $j < $tam - 1; $j++) {
 
-            if ($ordem == "desc") {
-                if ($numeroAtual < $proxNumero) {
-                    $aux = $numeroAtual;
-                    $numeroAtual = $proxNumero;
-                    $proxNumero = $aux;
+//             $proximoIndice = $j + 1;
+//             $numeroAtual = $dados[$j];
+//             $proxNumero = $dados[$proximoIndice];
+
+//             if ($ordem == "desc") {
+//                 if ($numeroAtual < $proxNumero) {
+//                     $aux = $numeroAtual;
+//                     $numeroAtual = $proxNumero;
+//                     $proxNumero = $aux;
             
-                    $dados[$j] = $numeroAtual;
-                    $dados[$proximoIndice] = $proxNumero;
-                }
-            } else {
-                if ($numeroAtual > $proxNumero) {
-                    $aux = $numeroAtual;
-                    $numeroAtual = $proxNumero;
-                    $proxNumero = $aux;
+//                     $dados[$j] = $numeroAtual;
+//                     $dados[$proximoIndice] = $proxNumero;
+//                 }
+//             } else {
+//                 if ($numeroAtual > $proxNumero) {
+//                     $aux = $numeroAtual;
+//                     $numeroAtual = $proxNumero;
+//                     $proxNumero = $aux;
 
-                    $dados[$j] = $numeroAtual;
-                    $dados[$proximoIndice] = $proxNumero;
-                }
-            }
+//                     $dados[$j] = $numeroAtual;
+//                     $dados[$proximoIndice] = $proxNumero;
+//                 }
+//             }
         
 
-        } 
-    }  
-    return $dados;
-} 
-function exibir(array $dados) {
-    $tam = count($dados);
+//         } 
+//     }  
+//     return $dados;
+// } 
+// function exibir(array $dados) {
+//     $tam = count($dados);
 
-    for ($i = 0; $i < $tam; $i++) {
-        echo "Array ordenado: $dados[$i]" . "<br>";
-    }
+//     for ($i = 0; $i < $tam; $i++) {
+//         echo "Array ordenado: $dados[$i]" . "<br>";
+//     }
 
-    echo "<br>";
-}
+//     echo "<br>";
+// }
 
      
        
     
-$dados = [10, 20, 30, 40, 50, 1, 300];
-$dadosOrdenados = ordenar($dados,"desc");
-exibir($dadosOrdenados);
+// $dados = [10, 20, 30, 40, 50, 1, 300];
+// $dadosOrdenados = ordenar($dados,"desc");
+// exibir($dadosOrdenados);
 
-echo "<br>";
+// echo "<br>";
 
-$dadosOrdenados = ordenar ($dados,"asc");
-exibir($dadosOrdenados);
+// $dadosOrdenados = ordenar ($dados,"asc");
+// exibir($dadosOrdenados);
 
 
 
+//  for ($i = 0; $i < count($dados); $i++) {
+// //             for ($a = $i + 1; $a < count($dados); $a++) {
+                
+// //             if ($dados[$i] < $dados[$a]) {
+// //                     $temp = $dados[$i];
+// //                     $dados[$i] = $dados[$a];
+// //                     $dados[$a] = $temp;
+$soma = [];
+$numerosA = [10, 20, 30, 40, 50];
+$numerosB = [5, 45, 37, 2, 25];
+
+for ($i = 0; $i < count($numerosA); $i++) {
+         
+            $somaIndece = $numerosA[$i] + $numerosB[$i];
+            $soma[] = $somaIndece;
+
+                 
+        
+ for ($i = 0; $i < count($soma); $i++){
+           echo $soma[$i] . "<br>";
+
+  }
+
+        }
+     
