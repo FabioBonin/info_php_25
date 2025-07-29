@@ -618,21 +618,133 @@
 // //                     $temp = $dados[$i];
 // //                     $dados[$i] = $dados[$a];
 // //                     $dados[$a] = $temp;
+// function ordenarArray(array $dados, string $ordem = "asc") {
+
+//     if ($ordem != "asc" && $ordem != "desc") {
+//         $ordem = "asc";
+//     }
+
+//     $tam = count($dados); // 0
+
+//     if ($tam == 0) {
+//         echo "o array informado esta vazio.";
+//         return;
+//     }
+
+//     for($i = 0; $i < $tam - 1; $i++) {
+
+//         for($j = 0; $j < $tam - 1; $j++) {
+
+//             $proximoIndice = $j + 1;
+//             $numeroAtual = $dados[$j];
+//             $proxNumero = $dados[$proximoIndice];
+
+//             if ($ordem == "desc") {
+//                 if ($numeroAtual < $proxNumero) {
+//                     $aux = $numeroAtual;
+//                     $numeroAtual = $proxNumero;
+//                     $proxNumero = $aux;
+            
+//                     $dados[$j] = $numeroAtual;
+//                     $dados[$proximoIndice] = $proxNumero;
+//                 }
+//             } else {
+//                 if ($numeroAtual > $proxNumero) {
+//                     $aux = $numeroAtual;
+//                     $numeroAtual = $proxNumero;
+//                     $proxNumero = $aux;
+
+//                     $dados[$j] = $numeroAtual;
+//                     $dados[$proximoIndice] = $proxNumero;
+//                 }
+//             }
+        
+
+//         } // fim FOR $j
+//     } // fim FOR $i
+
+//     return $dados;
+// } // fim funcao
+
+// // function exibirDados(array $dados) {
+// //     $tam = count($dados);
+
+// //     for ($i = 0; $i < $tam; $i++) {
+// //         echo "Array ordenado: $dados[$i]" . "<br>";
+// //     }
+
+// //     echo "<br>";
+// // }
 $soma = [];
 $numerosA = [10, 20, 30, 40, 50];
 $numerosB = [5, 45, 37, 2, 25];
+  
+for($i=0; $i < count($numerosA); $i++) {
+    
+    $somaElementos =  $numerosA[$i] + $numerosB[$i];
 
-for ($i = 0; $i < count($numerosA); $i++) {
-         
-            $somaIndece = $numerosA[$i] + $numerosB[$i];
-            $soma[] = $somaIndece;
+    $soma[] = $somaElementos;
+}
 
-                 
-        
- for ($i = 0; $i < count($soma); $i++){
-           echo $soma[$i] . "<br>";
 
-  }
+for($i=0; $i < count($soma); $i++) {
 
-        }
+    echo $soma[$i] . "<br>";
+}
+  
+echo "<br>";
+
+
+$produto = [];
+$numerosA = [10, 20, 30, 40, 50];
+$numerosB = [5, 45, 37, 2, 25];
+  
+for($i=0; $i < count($numerosA); $i++) {
+    
+    $multiplicaElementos =  $numerosA[$i] * $numerosB[$i];
+
+    $produto[] = $multiplicaElementos;
+}
+
+
+for($i=0; $i < count($produto); $i++) {
+
+    echo $produto[$i] . "<br>";
+}
+
+echo "<br>";
+
+ 
+$totalNotas = [
+    "200" => 0,
+    "100" => 0,
+    "50" => 0,
+    "20" => 0,
+    "10" => 0,
+    "5" => 0,
+    "2" => 0,
+];
+$valor = 1057;
+$notas = [200, 100, 50, 20, 10, 5, 2];
+
+$tamanhoArray = count($notas); // 7
+
+for($i = 0; $i < $tamanhoArray; $i++) {
+    $nota = $notas[$i];
+
+    if ($valor >= $nota) {
+        $quantidade = (int) ($valor / $nota); // 1.2 => 1
+        $valor -= $nota * $quantidade;
+        $totalNotas[$nota] += $quantidade;
+    }
+
+    if ($valor == 0) {
+        break;
+    }
+}
+
+foreach ($totalNotas as $notas => $quantidade) {
+    // 1 nota de 100;
+    echo "$quantidade nota(s) de $notas. <br>";
+}
      
