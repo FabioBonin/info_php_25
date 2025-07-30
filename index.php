@@ -727,13 +727,13 @@ $totalNotas = [
 $valor = 1057;
 $notas = [200, 100, 50, 20, 10, 5, 2];
 
-$tamanhoArray = count($notas); // 7
+$tamanhoArray = count($notas); 
 
 for($i = 0; $i < $tamanhoArray; $i++) {
     $nota = $notas[$i];
 
     if ($valor >= $nota) {
-        $quantidade = (int) ($valor / $nota); // 1.2 => 1
+        $quantidade = (int) ($valor / $nota); 
         $valor -= $nota * $quantidade;
         $totalNotas[$nota] += $quantidade;
     }
@@ -744,7 +744,7 @@ for($i = 0; $i < $tamanhoArray; $i++) {
 }
 
 foreach ($totalNotas as $notas => $quantidade) {
-    // 1 nota de 100;
+
     echo "$quantidade nota(s) de $notas. <br>";
 }
      
