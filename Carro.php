@@ -16,12 +16,27 @@ class Carro {
     public $motorista = "Fábio";
     public $ligado = false;
     public $podeRodar = 0;
-
-    public function ligar ($combustivel, $bateria)
-    {
-        $this->ligado = true;
-       
+    public $gasolina = 0;
+    public $portaAberta = false; 
+    
+    public function abrirPorta() { if ($this->portaAberta) 
+    { echo "A porta já está aberta."; 
+    } else { $this->portaAberta = true; 
+            echo "Você abriu a porta.";
+     }
+    } 
+    public function fecharPorta() { if (!$this->portaAberta)
+    { echo "A porta já está fechada."; } 
+    else { $this->portaAberta = false;
+          echo "Você fechou a porta.";
+         } 
+        } 
+    public function statusPorta() { if ($this->portaAberta)
+    { echo "A porta está aberta.";
+    } else { echo "A porta está fechada."; 
+      } 
     }
+}
 
     public function desligado ()
     {
@@ -29,14 +44,22 @@ class Carro {
     }
 
       public function rodar (){
-        $podeRodar = $this->bateria && $this->bateria && $this->ligado;
+        $podeRodar = $this->bateria && $this->ligado;
     {
         if ($this->ligado){
             echo "O carro já pode rodar...";
-        } else {
+        } else if (!$this->ligado) {
             echo "O carro está desligado, ligue o carro antes...";
+    }     else if ($this->ligado && $this->combustivel = false) {
+            echo "O carro está sem combustivel, abasteça primeiro...";
 
     }
+
+    public function abastecer ($litros){
+        $this->gasolina += $litros;
+        echo "Abastecido com $litros litros.
+     }
+        
     }
 }
       public function mostrar ()
