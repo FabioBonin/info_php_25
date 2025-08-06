@@ -15,3 +15,4 @@ git push
 como corrigir esse erro fatal: destination path 'info_php_25' already exists and is not an empty directory
 rm -rf info_php_25
 Para ordenar arrays em ordem decrescente (maior para menor) usando apenas for, sem nenhuma função do PHP como sort() ou rsort(), você pode usar o método de ordenação bubble sort manualmente.
+sudo service mariadb start // subir banco de dados
