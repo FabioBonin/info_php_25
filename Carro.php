@@ -31,21 +31,21 @@ class Carro {
           echo "Você fechou a porta.";
          } 
         } 
-    public function statusPorta() { if ($this->portaAberta)
-    { echo "A porta está aberta.";
+    public function statusPorta() { if ($this->portaAberta){ 
+        echo "A porta está aberta.";
     } else { echo "A porta está fechada."; 
       } 
     }
-}
+
 
     public function desligado ()
     {
         $this->ligado = false;
     }
 
-      public function rodar (){
+    public function rodar (){
         $podeRodar = $this->bateria && $this->ligado;
-    {
+    
         if ($this->ligado){
             echo "O carro já pode rodar...";
         } else if (!$this->ligado) {
@@ -54,14 +54,14 @@ class Carro {
             echo "O carro está sem combustivel, abasteça primeiro...";
 
     }
-
+}
+    
     public function abastecer ($litros){
         $this->gasolina += $litros;
-        echo "Abastecido com $litros litros.
+        echo "Abastecido com $litros litros";
      }
         
-    }
-}
+    
       public function mostrar ()
     {
         echo "Marca do Carro: $this->marca, Ano: $this->ano, Cor: $this->cor, Motor: $this->motor, Tipo: $this->tipo, 
@@ -81,6 +81,5 @@ class Carro {
 $objCarro = new Carro();
 $objCarro ->kmPorLitros(300, 30);
 $objCarro->exibir();
-$objCarro ->Ligar();
 echo "<br>";
 $objCarro ->mostrar();
