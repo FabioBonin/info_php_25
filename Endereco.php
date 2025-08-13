@@ -46,6 +46,16 @@ public $tipoEndereco = "";
     }
     public function alterarEstado($estado){
         return $this->estado = $estado;
+    }  public function obterCep(){
+        return $this->cep;
+    }
+    public function alterarCep($cep){
+        return $this->cep = $cep;
+    }  public function obterTipoEndereco(){
+        return $this->tipoEndereco;
+    }
+    public function alterarTipoEndereco($tipoEndereco){
+        return $this->tipoEndereco = $tipoEndereco;
     }
 
 

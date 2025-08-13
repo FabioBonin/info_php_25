@@ -8,6 +8,8 @@ class Pessoa {
     public $estadoCivil = "";
     public $nomeMae = "";
     public $nomePai = "";
+    public $cpf = 0;
+
 
     public function obterNome(){
         return $this->nome;
@@ -50,6 +52,11 @@ class Pessoa {
     }
      public function alterarNomePai($nomePai){
         return $this->nomePai = $nomePai;
+    }  public function obtercpf(){
+        return $this->cpf;
+    }
+     public function alterarcpf($cpf){
+        return $this->cpf = $cpf;
     }
 
             
