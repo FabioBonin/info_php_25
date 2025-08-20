@@ -29,10 +29,14 @@ CREATE TABLE `endereco` (
   `complemento` text DEFAULT NULL,
   `numero` smallint(6) NOT NULL,
   `cidade` varchar(255) NOT NULL,
-  `cep` smallint(6) NOT NULL,
+  `cep` varchar(100) NOT NULL,
   `pais` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `tipo_endereco` varchar(100) NOT NULL,
+  `id_pessoas` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `endereco_pessoas_FK` (`id_pessoas`),
+  CONSTRAINT `endereco_pessoas_FK` FOREIGN KEY (`id_pessoas`) REFERENCES `pessoas` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +45,7 @@ CREATE TABLE `endereco` (
 
 LOCK TABLES `endereco` WRITE;
 /*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
+INSERT INTO `endereco` VALUES (1,'borgo','luis_neves',NULL,600,'bento','95705480','brasil','recidencial',1),(2,'vilanova','dobar',NULL,189,'caxias','96504222','brasil','condominio',3),(3,'centro','coronel','prefeitura',11,'bento','94201777','brasil','comercial',2);
 /*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,9 +65,12 @@ CREATE TABLE `pessoas` (
   `estado_civil` enum('Casado','Solteiro') NOT NULL DEFAULT 'Solteiro',
   `nome_mae` text NOT NULL,
   `nome_pai` text DEFAULT NULL,
-  `cpf` smallint(6) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `cpf` varchar(11) NOT NULL,
+  `id_usuario` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pessoas_usuarios_FK` (`id_usuario`),
+  CONSTRAINT `pessoas_usuarios_FK` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +79,7 @@ CREATE TABLE `pessoas` (
 
 LOCK TABLES `pessoas` WRITE;
 /*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
-INSERT INTO `pessoas` VALUES (1,'fabiobonin','M','2000-09-26','independencia','Solteiro','margaretbonin','valdirbonin',1111);
+INSERT INTO `pessoas` VALUES (1,'fabiobonin','M','2000-09-26','independencia','Solteiro','margaret_bonin','valdir_bonin','99999999999',1),(2,'joaofeijao','M','1999-10-01','bento','Solteiro','maria_silva','pedro_silva','99958799998',2),(3,'fulanodasilva','M','1987-01-25','caxias','Casado','ana_da_silva',NULL,'11100077788',3);
 /*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,4 +126,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-12 21:52:06
+-- Dump completed on 2025-08-19 21:53:57
