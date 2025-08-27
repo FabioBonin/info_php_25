@@ -1,4 +1,5 @@
 <?php
+require_once "./Model.php";
 
 class Usuario {
     public $id = 0;
@@ -10,6 +11,45 @@ class Usuario {
     public $tipoPerfil = "";
     public $permissoes = "";
     public $logado = false;
+    private $modelUsuario = null;
+
+    public function __construct($model)
+    {
+        $this->modelUsuario = $model;
+    }
+
+    public function listarUsuarios() {
+        $sql = "SELECT * FROM usuarios";
+
+        $usuarios = $this->modelUsuario->Read($sql);
+
+        foreach ($usuarios as $idx => $usuario) {
+            echo $usuario->login . "<br>";
+            echo $usuario->senha . "<br>";
+        }
+    }
+       public function buscarUsuarios($id) {
+        $sql = "SELECT * FROM usuarios WHERE id=$id";
+
+        $usuarios = $this->modelUsuario->ReadOne($sql);
+              foreach ($usuarios as $idx => $usuario) {
+            echo $usuario->login . "<br>";
+            echo $usuario->status . "<br>";
+        }
+       }
+        public function atualizarUsuarios($id) {
+        $sql = "SELECT * FROM usuarios WHERE id=$id";
+
+        $usuarios = $this->modelUsuario->Upgrad($sql);
+        foreach ($usuarios as $idx => $usuario) {
+            echo $usuario->login . "<br>";
+            echo $usuario->senha . "<br>";
+            echo $usuario->email_recuperacao . "<br>";
+            echo $usuario->status . "<br>";
+            echo $usuario->tipo_perfil . "<br>";
+            echo $usuario->permissoes . "<br>";
+        }
+        }
 
     public function logar($login,$senha){
         $this->login = $login;
@@ -44,3 +84,7 @@ class Usuario {
     }
 
 }
+
+$usuario = new Usuario($model);
+$usuario->listarUsuarios();
+$usuario->buscarUsuarios(1);

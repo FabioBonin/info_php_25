@@ -33,3 +33,6 @@ sudo service mariadb start // subir banco de dados
     FLUSH PRIVILEGES;
 
     SELECT User FROM mysql.user;
+
+
+    // CRUD(criar,ler,atualizar,excluir) Create,Read,Update,Delete.
